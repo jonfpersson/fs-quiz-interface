@@ -21,7 +21,7 @@ def print_correct_answer(response):
 
 def send_request(extension):
     # Define the URL with the API key
-    url = f"https://api.fs-quiz.eu/1/YOUR-API-KEY/{extension}"
+    url = f"https://api.fs-quiz.eu/1/s29RaBPy/{extension}"
     print(url)
 
     try:
