@@ -1,5 +1,6 @@
 import requests
 import json
+import random
 
 def print_correct_answer(response):
     # Load the JSON response
@@ -59,7 +60,7 @@ while True:
         print_correct_answer(send_request("question/" + id))
         
     elif choice == '2':
-        id = str(random.randint(1, 1000))
+        id = str(random.randint(1, 600))
 
         response = send_request("question/" + id + "/info")
         parsed = json.loads(response)
