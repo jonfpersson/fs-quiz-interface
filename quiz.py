@@ -4,6 +4,7 @@ import random
 
 def print_correct_answer(response):
     # Load the JSON response
+    #print(response)
     response_data = json.loads(response)
 
     # Get the correct answer
@@ -22,7 +23,7 @@ def print_correct_answer(response):
 
 def send_request(extension):
     # Define the URL with the API key
-    url = f"https://api.fs-quiz.eu/1/s29RaBPy/{extension}"
+    url = f"https://api.fs-quiz.eu/2/answer?question_id={extension}"
     print(url)
 
     try:
@@ -57,7 +58,7 @@ while True:
     if choice == '1':
         
         id = input("Enter question id ")
-        print_correct_answer(send_request("question/" + id))
+        print_correct_answer(send_request(id))
         
     elif choice == '2':
         id = str(random.randint(1, 600))
