@@ -69,12 +69,13 @@ while True:
 
     elif choice == '3':
         print("You selected Option 3")
-        # Add code for Option 3 here
-    elif choice == '4':
-        print("You selected Option 4")
-        # Add code for Option 4 here
-    elif choice == '5':
-        break
+        start_id = input("Enter start id ")
+        end_id = input("Enter end id ")
+        for i in range(int(start_id),int(end_id) + 1):
+            print(i)
+            print_correct_answer(send_request(i))
+            print("\n")
+            print("\n")
     else:
         print("Invalid choice. Please choose a number between 1 and 5.")
 
